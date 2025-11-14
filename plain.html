@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .vision-mission-container {
+        position: relative;
+        width: 400px;
+        height: 150px;
+    }
+
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        text-align: center;
+    }
+
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .vism {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .parvis {
+        text-align: center;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <div class="vision-mission-container">
+        <div id="vision-statement" class="slide active">
+            <h2 class="vism">VISION</h2>
+            <p class="parvis">"To become the superlative Tourism & Transportation Operator in Tanzania & Africa at
+                Large"</p>
+        </div>
+
+        <div id="mission-statement" class="slide">
+            <h2 class="vism">MISSION</h2>
+            <p class="parvis">"To provide unforgettable, safe, and quality travel experiences while promoting
+                sustainable tourism and empowering local communities."</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const vision = document.getElementById('vision-statement');
+        const mission = document.getElementById('mission-statement');
+        // Set the duration for each slide in milliseconds (e.g., 5000ms = 5 seconds)
+        const duration = 5000;
+
+        let isVision = true;
+
+        function switchSlide() {
+            if (isVision) {
+                // Switch from Vision to Mission
+                vision.classList.remove('active');
+                mission.classList.add('active');
+            } else {
+                // Switch from Mission back to Vision
+                mission.classList.remove('active');
+                vision.classList.add('active');
+            }
+            // Toggle the state for the next switch
+            isVision = !isVision;
+        }
+
+        // This sets up a timer to run the switchSlide function every 'duration' milliseconds
+        setInterval(switchSlide, duration);
+    });
+</script>
+</body>
+
+</html>

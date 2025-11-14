@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* ----------------------------------- */
+    /* Global/Section Styles */
+    /* ----------------------------------- */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f7f7f7;
+        /* Very light background matching the image */
+    }
+
+    .accommodation-section {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .accommodation-section header h2 {
+        font-size: 2.2em;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        max-width: 800px;
+        margin: 0 auto 50px auto;
+        font-size: 1em;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    /* ----------------------------------- */
+    /* Card Container (Flexbox for Layout) */
+    /* ----------------------------------- */
+    .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        /* Space between cards */
+        padding: 0 20px;
+    }
+
+    .accommodation-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        flex: 1 1 300px;
+        max-width: 350px;
+        cursor: pointer;
+    }
+
+    .accommodation-card img {
+        display: block;
+        width: 100%;
+        height: 500px;
+        transition: transform 0.4s ease;
+    }
+
+    /* ----------------------------------- */
+    /* Overlay Styles */
+    /* ----------------------------------- */
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Hide the overlay on the first card visually, as per the image */
+    .card-container .accommodation-card:first-child .card-overlay {
+        background-color: transparent;
+        /* Remove the dark filter */
+    }
+
+
+
+
+
+    /* Show title for the middle and right cards */
+    .card-container .accommodation-card:nth-child(n+2) .card-title {
+        display: block;
+    }
+
+    .view-button {
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 10px 30px;
+        font-size: 0.9em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Image Zoom on Hover */
+    .accommodation-card:hover img {
+        transform: scale(1.05);
+    }
+
+    /* ----------------------------------- */
+    /* MEDIA SCREEN QUERY FOR RESPONSIVENESS */
+    /* ----------------------------------- */
+
+    /* For screens 900px and narrower (tablets) */
+    @media screen and (max-width: 900px) {
+        .card-container {
+            /* Switch to wrapping the items, allowing 2 per row */
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .accommodation-card {
+            flex: 1 1 45%;
+            /* Allows two cards per row with some space */
+            max-width: unset;
+        }
+    }
+
+    /* For screens 600px and narrower (phones) */
+    @media screen and (max-width: 600px) {
+        .accommodation-section header h2 {
+            font-size: 1.8em;
+        }
+
+        .intro-text {
+            padding: 0 10px;
+            margin-bottom: 30px;
+        }
+
+        .card-container {
+            /* Stack the cards vertically */
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .accommodation-card {
+            width: 90%;
+            /* Take up most of the screen width */
+            max-width: 450px;
+        }
+    }
+</style>
+
+<body>
+
+    <section class="accommodation-section">
+        <header>
+            <h2>ACCOMMODATION</h2>
+        </header>
+
+        <p class="intro-text">
+            There are a variety of accommodation properties within NCA, ranging from luxury hotels, lodges, tented camps
+            and public camping sites located in some of the most pristine scenic areas.
+        </p>
+
+        <div class="card-container">
+            <div class="accommodation-card">
+                <img src="8d5165000043347b1df79091f0ff6110.jpg" alt="Luxury hotel or lodge room">
+                <div class="card-overlay">
+                    <p class="card-title">LODGE & HOTEL</p>
+                    <a href="#" class="view-button">VIEW</a>
+                </div>
+            </div>
+
+            <div class="accommodation-card">
+                <img src="7422cedb08b8ec241ea2e6c689e13d5c.jpg" alt="Permanent settlement accommodation tent">
+                <div class="card-overlay">
+                    <p class="card-title">PERMANENT SETTLEMENT ACCOMMODATION</p>
+                    <a href="#" class="view-button">VIEW</a>
+                </div>
+            </div>
+
+            <div class="accommodation-card">
+                <img src="b2bf1c68ffa43769fae0bcfa239c57ab.jpg" alt="Temporary campsite tent and outdoor area">
+                <div class="card-overlay">
+                    <p class="card-title">TEMPORARY CAMPSITE</p>
+                    <a href="#" class="view-button">VIEW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

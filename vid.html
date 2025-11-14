@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serengeti Video Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+    /* ----------------------------------- */
+    /* Global/Section Styles */
+    /* ----------------------------------- */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', serif;
+        /* Using serif font to match the image style */
+        background-color: #f7f7f7;
+        /* Light gray background */
+    }
+
+    .video-section {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Icon Styling */
+    .icon-container {
+        color: #4CAF50;
+        /* Green/Teal color for the icon */
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .icon-container .fa-video {
+        /* Optional: to make the icon look more like a block/solid shape */
+        padding: 5px;
+    }
+
+    /* Text Styling */
+    .main-title {
+        font-family: Georgia, serif;
+        /* Another strong serif font */
+        font-size: 2.5em;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .text-block {
+        max-width: 700px;
+        margin: 0 auto 30px auto;
+        color: #666;
+        font-size: 1.1em;
+        line-height: 1.7;
+    }
+
+    .text-block p {
+        margin-bottom: 1.2em;
+    }
+
+    /* ----------------------------------- */
+    /* Video Wrapper (Responsive Aspect Ratio) */
+    /* ----------------------------------- */
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        /* 16:9 aspect ratio */
+        padding-bottom: 56.25%;
+        height: 0;
+        margin-top: 40px;
+    }
+
+    .video-placeholder,
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-size: cover;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    /* Overlay Content for Text and Play Button */
+    .video-overlay-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        /* Slight dark overlay for text readability */
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .location {
+        font-size: 1em;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        /* Line element above the location text */
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding-top: 10px;
+    }
+
+    .video-title {
+        font-family: 'Times New Roman', serif;
+        font-size: 3.5em;
+        letter-spacing: 10px;
+        font-weight: 600;
+        margin: 10px 0;
+        /* Line element below the title text */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+        font-style: italic;
+        margin-top: 5px;
+    }
+
+    .play-icon {
+        font-size: 4em;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .play-icon:hover {
+        color: #ffd700;
+        /* Subtle gold hover color */
+    }
+
+    /* ----------------------------------- */
+    /* MEDIA SCREEN QUERY FOR RESPONSIVENESS */
+    /* ----------------------------------- */
+
+    /* For screens 768px and narrower (tablets and phones) */
+    @media screen and (max-width: 768px) {
+        .video-section {
+            margin: 30px auto;
+            padding: 10px;
+        }
+
+        .main-title {
+            font-size: 2em;
+        }
+
+        .text-block {
+            font-size: 1em;
+            padding: 0 10px;
+        }
+
+        /* Adjust overlay text size for smaller screens */
+        .video-title {
+            font-size: 2.5em;
+            letter-spacing: 5px;
+        }
+
+        .play-icon {
+            font-size: 3em;
+        }
+    }
+</style>
+
+<body>
+
+    <section class="video-section">
+
+        <div class="icon-container">
+            <i class="fas fa-video"></i>
+        </div>
+
+        <h1 class="main-title">Serengeti National Park video</h1>
+
+        <div class="text-block">
+            <p>
+                The best way of understanding what Serengeti National Park is about is
+                by seeing some thrilling footage from the area. Watch this video to experience the
+                Serengeti, its splendour and to meet some of our celebrity wildlife species.
+            </p>
+            <p>
+                Be careful, after watching this video you can be sure that you want to travel to Tanzania. Today.
+            </p>
+        </div>
+
+        <div class="video-wrapper">
+            <div class="video-placeholder">
+                <div class="video-overlay-content">
+                    <!-- <span class="location">- Tanzania -</span>
+                    <h2 class="video-title">SERENGETI</h2>
+                    <span class="subtitle">Home to the Great Migration</span>
+                    <i class="far fa-play-circle play-icon"></i> -->
+                    <iframe src="<iframe width=" 528" height="301" src="https://www.youtube.com/embed/fLzxlms-PWo"
+                        title="Better than the Serengeti?! Insane Tanzania Safari (Tarangire National Park)"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

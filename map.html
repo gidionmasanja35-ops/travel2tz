@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .map-location {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .map-containerses {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+
+    .map-containerses iframe {
+        width: 100%;
+        height: 450px;
+        display: block;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .map-container iframe {
+            height: 300px;
+        }
+    }
+</style>
+
+<body>
+    <div class="map-location">
+        <h2 class="section-titles">OUR LOCATION</h2>
+        <p class="section-descriptioned">
+            Find us in the heart of safari country, ready to start your adventure.
+        </p>
+        <div class="map-containerses">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.101880486005!2d36.6575122!3d-3.3768222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18371c6c0393046f%3A0xc48c0379261a8685!2sArusha%2C%20Tanzania!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Holli Tour Location Map"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
